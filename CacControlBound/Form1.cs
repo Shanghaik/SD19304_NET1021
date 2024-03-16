@@ -51,8 +51,10 @@ namespace CacControlBound
         // Khi click vào pictureBox thì sẽ hiển thị ra 1 OpenFileDialog cho phép chọn file
         private void ptb_Image_Click(object sender, EventArgs e)
         {
+            // OpenFile Dialog cho phép ta chọn file từ máy
             OpenFileDialog dialog= new OpenFileDialog();
-            dialog.Filter = "Files|*.jpg;*.jpeg;*.png;...";
+            // Bộ Lọc file cần dùng
+            dialog.Filter = "Files|*.jpg;*.jpeg;*.png;..."; // File dạng ảnh
             dialog.Title = "Please select an image file to encrypt.";
             dialog.ShowDialog();
             ptb_Image.SizeMode = PictureBoxSizeMode.StretchImage; // Chỉnh ảnh vừa khung
