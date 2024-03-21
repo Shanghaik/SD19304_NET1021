@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DocGhiObjXml
 {
-    internal class Human
+    public class Human
     {
         public string Ten { get; set; }
         public DateTime NamSinh { get; set; }
