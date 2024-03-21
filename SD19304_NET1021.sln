@@ -9,7 +9,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ChuongTrinhMayTinh", "Chuon
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CacControlBound", "CacControlBound\CacControlBound.csproj", "{A7F0A529-C8F3-407B-890D-05F64E47881D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Menu_DocGhiTxt", "Menu_DocGhiTxt\Menu_DocGhiTxt.csproj", "{AC7088A6-C534-479C-8E4E-B73404B602B2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Menu_DocGhiTxt", "Menu_DocGhiTxt\Menu_DocGhiTxt.csproj", "{AC7088A6-C534-479C-8E4E-B73404B602B2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DocGhiObjXml", "DocGhiObjXml\DocGhiObjXml.csproj", "{5911472D-8117-4B29-A87C-6DF15D0B2B85}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{AC7088A6-C534-479C-8E4E-B73404B602B2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AC7088A6-C534-479C-8E4E-B73404B602B2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AC7088A6-C534-479C-8E4E-B73404B602B2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5911472D-8117-4B29-A87C-6DF15D0B2B85}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5911472D-8117-4B29-A87C-6DF15D0B2B85}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5911472D-8117-4B29-A87C-6DF15D0B2B85}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5911472D-8117-4B29-A87C-6DF15D0B2B85}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

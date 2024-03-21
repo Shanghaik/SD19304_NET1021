@@ -50,8 +50,7 @@ namespace Menu_DocGhiTxt
                     // Xử lý khi người dùng chọn No hoặc đóng MessageBox
                     Console.WriteLine("Bạn chưa muốn lưu file");
                 }
-            }
-            
+            }     
         }
 
 
