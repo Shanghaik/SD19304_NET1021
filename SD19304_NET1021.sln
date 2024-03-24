@@ -11,7 +11,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CacControlBound", "CacContr
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Menu_DocGhiTxt", "Menu_DocGhiTxt\Menu_DocGhiTxt.csproj", "{AC7088A6-C534-479C-8E4E-B73404B602B2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DocGhiObjXml", "DocGhiObjXml\DocGhiObjXml.csproj", "{5911472D-8117-4B29-A87C-6DF15D0B2B85}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DocGhiObjXml", "DocGhiObjXml\DocGhiObjXml.csproj", "{5911472D-8117-4B29-A87C-6DF15D0B2B85}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OntapTongHop", "OntapTongHop\OntapTongHop.csproj", "{67B21A10-E88B-4825-8196-1651D8DEDE9A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{5911472D-8117-4B29-A87C-6DF15D0B2B85}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5911472D-8117-4B29-A87C-6DF15D0B2B85}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5911472D-8117-4B29-A87C-6DF15D0B2B85}.Release|Any CPU.Build.0 = Release|Any CPU
+		{67B21A10-E88B-4825-8196-1651D8DEDE9A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{67B21A10-E88B-4825-8196-1651D8DEDE9A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{67B21A10-E88B-4825-8196-1651D8DEDE9A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{67B21A10-E88B-4825-8196-1651D8DEDE9A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
