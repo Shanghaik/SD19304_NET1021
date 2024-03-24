@@ -41,5 +41,23 @@ namespace OntapTongHop
             }
             else MessageBox.Show("Tiếp tục nhập");
         }
+
+        private void btn_Doc_Click(object sender, EventArgs e)
+        {
+            // Khi ấn vào đây ta đọc dữ liệu từ file txt
+            // Cho phép ta mở các thư mục vào đọc file dược chọn từ các thư mục đó
+            // cần sử dụng 1 OpenFileDialog để mở
+            // mở OpenFileDialog
+            OpenFileDialog dialog = new OpenFileDialog();
+            // Tạo bộ lọc các loại file
+            dialog.Title = "Please select a txt file to show";
+            dialog.Filter = "Tệp tin văn bản (*.txt)|*.txt|Tất cả các tệp tin (*.*)|*.*"; // Lọc
+            dialog.ShowDialog();
+            //Lấy đường dẫn từ dialog đã chọn
+            string filePath = dialog.FileName;
+            // Đưa dữ liệu từ file txt đã chọn vào textBox
+            tbt_Nhap.Text = File.ReadAllText(filePath);
+            MessageBox.Show("Đọc thành công");
+        }
     }
 }

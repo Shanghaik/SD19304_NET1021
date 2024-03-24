@@ -59,6 +59,7 @@
             this.btn_Doc.TabIndex = 2;
             this.btn_Doc.Text = "Đọc";
             this.btn_Doc.UseVisualStyleBackColor = true;
+            this.btn_Doc.Click += new System.EventHandler(this.btn_Doc_Click);
             // 
             // FormNhapChu
             // 
