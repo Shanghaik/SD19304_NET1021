@@ -1,10 +1,13 @@
-﻿namespace CSDL_ADO
+﻿using System.Windows.Forms;
+
+namespace CSDL_ADO
 {
     public partial class Form1 : Form
     {
         Services services = new Services();
         public Form1()
         {
+            
             InitializeComponent();
         }
 
@@ -16,6 +19,8 @@
         // Tạo 1 phương thức chung để Load dữ liệu lên dataGriview theo cấu hình
         public void LoadDataToGridView(List<Sinhvien> sv)
         {
+            // Xóa dữ liệu cũ để thêm dữ liệu mới
+            dtg_Data.Rows.Clear();
             int stt = 1;
             // Xác định số lượng cột của datagridView
             dtg_Data.ColumnCount = 5; // Có 4 thuộc tính nhưng ta sẽ thêm 1 cột số thứ tự
@@ -30,6 +35,21 @@
                 string gt = sinhvien.Gtinh ? "Nam" : "Nữ";
                 dtg_Data.Rows.Add(stt++, sinhvien.Name, sinhvien.Dob, sinhvien.Major, gt);
             }
+            dtg_Data.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill; // Tự động bơm đầy vào view
+        }
+
+        private void tbt_Search_TextChanged(object sender, EventArgs e)
+        {
+            var data = services.SearchByName(tbt_Search.Text);
+            LoadDataToGridView(data);
+        }
+
+        private void btn_Clear_Click(object sender, EventArgs e)
+        {
+            tbt_Major.Text = string.Empty;
+            tbt_Name.Text = string.Empty;
+            rdb_Female.Checked = false;
+            rdb_Male.Checked = true;
         }
     }
 }

@@ -195,6 +195,7 @@
             this.tbt_Search.PlaceholderText = "Nhập vào để tìm kiếm";
             this.tbt_Search.Size = new System.Drawing.Size(343, 34);
             this.tbt_Search.TabIndex = 5;
+            this.tbt_Search.TextChanged += new System.EventHandler(this.tbt_Search_TextChanged);
             // 
             // btn_Clear
             // 
@@ -204,6 +205,7 @@
             this.btn_Clear.TabIndex = 4;
             this.btn_Clear.Text = "Clear Thông tin";
             this.btn_Clear.UseVisualStyleBackColor = true;
+            this.btn_Clear.Click += new System.EventHandler(this.btn_Clear_Click);
             // 
             // btn_Delete
             // 

@@ -50,7 +50,7 @@ namespace CSDL_ADO
                     Name = row["ten"].ToString(),
                     Dob = Convert.ToDateTime(row["dob"].ToString()),
                     Major = row["major"].ToString(),
-                    Gtinh = row["gtinh"].Equals("1")
+                    Gtinh = row["gtinh"].ToString().ToLower().Equals("true")
                     // Thêm các trường khác tương ứng
                 };
                 list.Add(sv);
@@ -61,6 +61,19 @@ namespace CSDL_ADO
         // 3. Sửa data trong CSDL
         // 4. Xóa data
         // 5. Tìm kiếm
+        public List<Sinhvien> SearchByName(string name)
+        {
+            var allData = GetAll(); // Lấy hết danh sách sinh viên ra đã
+            List<Sinhvien> search = new List<Sinhvien>();
+            foreach (var item in allData)
+            {
+                if (item.Name.Contains(name)) // Nếu tên có chữ chuỗi nhập vào thì thêm vào danh sách trả về
+                {
+                    search.Add(item);
+                }
+            }
+            return search;
+        }
 
     }
 }
