@@ -171,6 +171,7 @@
             this.dtg_Data.RowTemplate.Height = 29;
             this.dtg_Data.Size = new System.Drawing.Size(1011, 262);
             this.dtg_Data.TabIndex = 0;
+            this.dtg_Data.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtg_Data_CellClick);
             // 
             // groupBox3
             // 
@@ -215,6 +216,7 @@
             this.btn_Delete.TabIndex = 3;
             this.btn_Delete.Text = "Xóa sinh viên";
             this.btn_Delete.UseVisualStyleBackColor = true;
+            this.btn_Delete.Click += new System.EventHandler(this.btn_Delete_Click);
             // 
             // btn_Edit
             // 
@@ -233,6 +235,7 @@
             this.btn_Add.TabIndex = 1;
             this.btn_Add.Text = "Thêm sinh viên";
             this.btn_Add.UseVisualStyleBackColor = true;
+            this.btn_Add.Click += new System.EventHandler(this.btn_Add_Click);
             // 
             // btn_Show
             // 

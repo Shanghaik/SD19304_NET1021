@@ -40,7 +40,8 @@ namespace CSDL_ADO
             {
                 MessageBox.Show(e.Message); // Hiển thị lỗi nếu có
             }
-            finally { 
+            finally
+            {
                 con.Close(); // Dù có ra sao đi chăng nữa, thì kết nối vẫn cần đóng
             }
             foreach (DataRow row in data.Rows)
@@ -55,11 +56,52 @@ namespace CSDL_ADO
                 };
                 list.Add(sv);
             }
-            return list;    
+            return list;
         }
         // 2. Ghi data vào CSDL
+        public void CreateSinhvien(string name, string dob, string major, bool gtinh)
+        {
+            // 4 tham số truyền vào phương thức sẽ lấy dữ liệu từ form
+            // (các textbox, datetimePicker và radioButton
+            SqlConnection con = new SqlConnection(connectionString);
+            int gt = gtinh ? 1 : 0;
+            string query = $"Insert into Sinhvien values (N'{name}', '{dob}', N'{major}', {gt})";
+            SqlCommand command = new SqlCommand(query, con);
+            try
+            {
+                con.Open(); // Mở kết nối
+                command.ExecuteReader(); // Chạy câu truy vấn
+                MessageBox.Show("Thêm thành công");
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message);
+            }
+            finally { 
+                con.Close(); 
+            }
+        }
         // 3. Sửa data trong CSDL
         // 4. Xóa data
+        public void XoaSinhvien(string name)
+        {
+            SqlConnection con = new SqlConnection(connectionString);
+            string query = $"delete from Sinhvien where ten = N'{name}'"; // Tạo truy vấn xóa
+            SqlCommand command = new SqlCommand(query, con);
+            try
+            {
+                con.Open();
+                int count = command.ExecuteNonQuery(); // Trả về số dòng được xóa (affected)
+                MessageBox.Show($"Đã xóa {count} bản ghi");
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message);
+            }
+            finally { 
+                con.Close(); 
+            }
+        }
         // 5. Tìm kiếm
         public List<Sinhvien> SearchByName(string name)
         {
