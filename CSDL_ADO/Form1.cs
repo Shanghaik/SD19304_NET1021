@@ -66,11 +66,11 @@ namespace CSDL_ADO
 
         private void dtg_Data_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            int max = services.GetAll().Count; // Đếm số lượng bản ghi tối đa trong datagridview 
+            int max = dtg_Data.Rows.Count; // Đếm số lượng bản ghi tối đa trong datagridview 
             // Sự kiện khi chúng ta click vào 1 ô bất kì trên dataGridView sẽ load dữ liệu lên các control
             // Lấy vị trí click
             int index = e.RowIndex; // Lấy ra cái dòng
-            if (index >= 0 && index < max)
+            if (index >= 0 && index < max) // Nếu vị trí được chọn không vượt quá phạm vi của datagridView 
             {
                 var rowData = dtg_Data.Rows[index]; // Lấy tất cả dữ liệu của dòng mà có ô được click
                                                     // Cell - 1 ô bất kì, Column - Cột bất kì,  Row - Dòng bất kì
@@ -99,6 +99,17 @@ namespace CSDL_ADO
         private void btn_Delete_Click(object sender, EventArgs e)
         {
             services.XoaSinhvien(tbt_Name.Text);
+            LoadDataToGridView(services.GetAll());
+        }
+
+        private void btn_Edit_Click(object sender, EventArgs e)
+        {
+            string name = tbt_Name.Text;
+            string dob = dtp_Dob.Value.ToString("yyyy-MM-dd");
+            // Chuyển data từ định dạng Datetime sang string dạng yyyy-MM-dd (2022-11-11)
+            string major = tbt_Major.Text;
+            bool gtinh = rdb_Male.Checked;
+            services.SuaSinhVien(name, dob, major, gtinh);
             LoadDataToGridView(services.GetAll());
         }
     }

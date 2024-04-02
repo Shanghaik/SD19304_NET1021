@@ -226,6 +226,7 @@
             this.btn_Edit.TabIndex = 2;
             this.btn_Edit.Text = "Sửa sinh viên";
             this.btn_Edit.UseVisualStyleBackColor = true;
+            this.btn_Edit.Click += new System.EventHandler(this.btn_Edit_Click);
             // 
             // btn_Add
             // 

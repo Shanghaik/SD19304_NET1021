@@ -82,6 +82,30 @@ namespace CSDL_ADO
             }
         }
         // 3. Sửa data trong CSDL
+        public void SuaSinhVien(string name, string dob, string major, bool gtinh)
+        {
+            // 4 tham số truyền vào phương thức sẽ lấy dữ liệu từ form
+            // (các textbox, datetimePicker và radioButton
+            SqlConnection con = new SqlConnection(connectionString);
+            int gt = gtinh ? 1 : 0;
+            string query = $"Update Sinhvien set major = N'{major}', dob = '{dob}', gtinh = {gt} " +
+                $"where ten = N'{name}'";
+            SqlCommand command = new SqlCommand(query, con);
+            try
+            {
+                con.Open(); // Mở kết nối
+                command.ExecuteReader(); // Chạy câu truy vấn
+                MessageBox.Show("Sửa thành công");
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message);
+            }
+            finally
+            {
+                con.Close();
+            }
+        }
         // 4. Xóa data
         public void XoaSinhvien(string name)
         {
