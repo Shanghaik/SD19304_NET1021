@@ -66,29 +66,34 @@ namespace CSDL_ADO
 
         private void dtg_Data_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            int max = services.GetAll().Count; // Đếm số lượng bản ghi tối đa trong datagridview 
             // Sự kiện khi chúng ta click vào 1 ô bất kì trên dataGridView sẽ load dữ liệu lên các control
             // Lấy vị trí click
             int index = e.RowIndex; // Lấy ra cái dòng
-            var rowData = dtg_Data.Rows[index]; // Lấy tất cả dữ liệu của dòng mà có ô được click
-            // Cell - 1 ô bất kì, Column - Cột bất kì,  Row - Dòng bất kì
-            string ten = rowData.Cells[1].Value.ToString(); // Để ý sẽ thấy Cell[0] là cột số thứ tự
-            DateTime dob = (DateTime)rowData.Cells[2].Value;
-            string major = rowData.Cells[3].Value.ToString();
-            bool gtinh = rowData.Cells[4].Value.ToString().Equals("Nam"); // So sánh dữ liệu hiển thị với Nam, nếu
-            // là Nam thì true, Nữ thì False
-            // Gán giá trị cho các control 
-            tbt_Name.Text = ten;
-            dtp_Dob.Value = dob;
-            tbt_Major.Text = major;
-            if (gtinh)
+            if (index >= 0 && index < max)
             {
-                rdb_Male.Checked = true;
+                var rowData = dtg_Data.Rows[index]; // Lấy tất cả dữ liệu của dòng mà có ô được click
+                                                    // Cell - 1 ô bất kì, Column - Cột bất kì,  Row - Dòng bất kì
+                string ten = rowData.Cells[1].Value.ToString(); // Để ý sẽ thấy Cell[0] là cột số thứ tự
+                DateTime dob = (DateTime)rowData.Cells[2].Value;
+                string major = rowData.Cells[3].Value.ToString();
+                bool gtinh = rowData.Cells[4].Value.ToString().Equals("Nam"); // So sánh dữ liệu hiển thị với Nam, nếu
+                                                                              // là Nam thì true, Nữ thì False
+                                                                              // Gán giá trị cho các control 
+                tbt_Name.Text = ten;
+                dtp_Dob.Value = dob;
+                tbt_Major.Text = major;
+                if (gtinh)
+                {
+                    rdb_Male.Checked = true;
+                }
+                else
+                {
+                    rdb_Female.Checked = true;
+                }
+                tbt_Name.ReadOnly = true; // Không cho sửa tên khi click vào 1 ô
             }
-            else
-            {
-                rdb_Female.Checked = true;
-            }
-            tbt_Name.ReadOnly = true; // Không cho sửa tên khi click vào 1 ô
+            else MessageBox.Show("Hãy chọn các vị trí trong đúng datagridView");     
         }
 
         private void btn_Delete_Click(object sender, EventArgs e)
