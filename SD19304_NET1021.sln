@@ -15,7 +15,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DocGhiObjXml", "DocGhiObjXm
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OntapTongHop", "OntapTongHop\OntapTongHop.csproj", "{67B21A10-E88B-4825-8196-1651D8DEDE9A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSDL_ADO", "CSDL_ADO\CSDL_ADO.csproj", "{C6559F20-258F-492F-BDAB-9848A6995547}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CSDL_ADO", "CSDL_ADO\CSDL_ADO.csproj", "{C6559F20-258F-492F-BDAB-9848A6995547}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ThiThu", "ThiThu\ThiThu.csproj", "{4A4B9912-E4EC-4320-9681-A51E06406B96}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EFCoreVs3Layer", "EFCoreVs3Layer\EFCoreVs3Layer.csproj", "{583C1F91-9B66-4BD3-8432-45346675CBD5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -51,6 +55,14 @@ Global
 		{C6559F20-258F-492F-BDAB-9848A6995547}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C6559F20-258F-492F-BDAB-9848A6995547}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C6559F20-258F-492F-BDAB-9848A6995547}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4A4B9912-E4EC-4320-9681-A51E06406B96}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4A4B9912-E4EC-4320-9681-A51E06406B96}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4A4B9912-E4EC-4320-9681-A51E06406B96}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4A4B9912-E4EC-4320-9681-A51E06406B96}.Release|Any CPU.Build.0 = Release|Any CPU
+		{583C1F91-9B66-4BD3-8432-45346675CBD5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{583C1F91-9B66-4BD3-8432-45346675CBD5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{583C1F91-9B66-4BD3-8432-45346675CBD5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{583C1F91-9B66-4BD3-8432-45346675CBD5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
